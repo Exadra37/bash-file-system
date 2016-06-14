@@ -45,3 +45,11 @@ set -e
 
         [ -f "${file}" ] || Touch_File "${file}"
     }
+
+    function Append_To_File
+    {
+        local to_file="${1}"
+        local content="${2}"
+
+        echo "${content}" >> "${to_file}"
+    }
